@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alx-prediction-pod
+  labels:
+    app: alx-prediction-pod
+spec:
+  containers:
+  - name: alx-api
+    image: docker.io/tinegaonchari/api
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080

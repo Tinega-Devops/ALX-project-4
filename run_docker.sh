@@ -11,5 +11,5 @@ docker build --tag=tinegaonchari/api .
 docker image ls
 # Step 3: 
 # Run flask app
-docker run -p 8080:5001 api
+docker run -p 8000:5000 tinegaonchari/api
 
