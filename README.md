@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Tinega-Devops/ALX-project-4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Tinega-Devops/ALX-project-4/tree/main)
 
 ## Project Overview
 
@@ -48,3 +48,17 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+### Files Summary
+
+1. `README`: This file contains all information about this repository 
+2. `Dockerfile`: This file contains all commands that which run when docker image is being built.
+3. `Makefile` : Makefile has instructions on how to setup ,install,test and lint 
+4. `app.py` : This is the python file that contains the flask app 
+5. `docker_out.txt`: this file has the log output and prediction value optained after running `make_prediction.sh` against flask container app.
+6. `kubernetes_out.txt`: This file contains log output of the flask app running on kubernetes,i.e call `make_prediction.sh`; the terminal output then copied to `kubernetes_out.txt`.
+7. `make_prediction.sh` This file contains a bash script for making calls to /predict endpoint of flask app to make predictions.
+8. `config.yml` : The file contains circleci workflow configurations for running circleci pipeline.
+9. `run_docker.sh` : This script file runs docker command for Building , listing, and running docker image locally.
+10. `run_kubernetes.sh` : This script runs a docker image with kubernetes, lists the kubernetes pod(s), and forwards the container port to a host, using `kubectl` appropriately.
+11. `upload_docker.sh` : This script uploads built docker image to your own personal Docker ID.
